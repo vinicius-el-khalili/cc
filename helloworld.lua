@@ -16,7 +16,5 @@ end
 local Table = {}
 table.insert(Table, "much table")
 print(Table[1])
-print("hmmmmmm")
-turtle.turnLeft()
-turtle.digDown()
+print("hmmmmmm?")
 
