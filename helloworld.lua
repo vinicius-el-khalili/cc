@@ -15,7 +15,7 @@ end
 
 local Table = {}
 table.insert(Table, "much table")
-print(table[1])
+print(table)
 
 turtle.turnLeft()
 
