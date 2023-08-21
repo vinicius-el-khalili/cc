@@ -18,4 +18,5 @@ table.insert(Table, "much table")
 print(Table[1])
 
 turtle.turnLeft()
+turtle.digDown()
 
