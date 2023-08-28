@@ -1,3 +1,7 @@
+term.clear()
+term.setCursorPos(1,1)
+print("stating...")
+
 local function createFile (url,filename)
     local response = http.get(url)
     if response then
