@@ -1,8 +1,5 @@
-term.clear()
-term.setCursorPos(1,1)
-print("stating...")
-
 local function createFile (url,filename)
+    print("stating...")
     local response = http.get(url)
     if response then
         local code = response.readAll()
