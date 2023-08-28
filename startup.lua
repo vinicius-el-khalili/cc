@@ -2,7 +2,7 @@
 local function createFile (url,filename)
     term.clear()
     term.setCursorPos(1,1)
-    print("stating...")
+    print("starting...")
     local response = http.get(url)
     if response then
         local code = response.readAll()
