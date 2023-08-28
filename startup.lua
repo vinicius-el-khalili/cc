@@ -2,6 +2,7 @@ local function createFile (url,filename)
     local response = http.get(url)
     if response then
         local code = response.readAll()
+        fs.delete(filename)
         local file = fs.open(filename,"w")
         file.write(code)
         file.close()
