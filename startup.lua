@@ -1,4 +1,7 @@
+
 local function createFile (url,filename)
+    term.clear()
+    term.setCursorPos(1,1)
     print("stating...")
     local response = http.get(url)
     if response then
