@@ -18,4 +18,4 @@ local function createFile (url,filename)
 end
 
 local url1 = "https://raw.githubusercontent.com/vinicius-el-khalili/cc/master/helloworld.lua"
-createFile(url1,"github.lua")
+createFile(url1,"helloworld.lua")
