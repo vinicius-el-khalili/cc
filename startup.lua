@@ -15,4 +15,6 @@ local function createFile (url,filename)
 end
 
 local url1 = "https://raw.githubusercontent.com/vinicius-el-khalili/cc/master/health.lua"
+local url1 = "https://raw.githubusercontent.com/vinicius-el-khalili/cc/master/startup.lua"
 createFile(url1,"health.lua")
+createFile(url2,"startup.lua")
