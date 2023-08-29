@@ -1,3 +1,5 @@
+local input = "forward 3 up 2 left 1 right 3"
+
 local function moveTurtle(direction, distance)
     local movementFunctions = {
         forward = turtle.forward,
@@ -32,9 +34,4 @@ local function processMovementInput(input)
     end
 end
 
-local input1 = "forward 3 up 2 left 1 right 3"
-local input2 = "back 3 right forward 2"
-
-processMovementInput(input1)
-print("===")
-processMovementInput(input2)
+processMovementInput(input)
