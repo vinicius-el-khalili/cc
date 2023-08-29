@@ -1,5 +1,3 @@
-// https://raw.githubusercontent.com/vinicius-el-khalili/cc/master/startup.lua
-
 local function createFile (url,filename)
 
     term.clear()
