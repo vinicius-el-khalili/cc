@@ -1,4 +1,4 @@
-local input = "forward 3 up 2 left 1 right 3"
+local input = "forward 3 left 2 forward 3 right 2"
 
 local function moveTurtle(direction, distance)
     local movementFunctions = {
