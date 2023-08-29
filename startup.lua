@@ -15,6 +15,6 @@ local function createFile (url,filename)
 end
 
 local url1 = "https://raw.githubusercontent.com/vinicius-el-khalili/cc/master/helloworld.lua"
-local url2 = "https://raw.githubusercontent.com/vinicius-el-khalili/cc/master/howTheTablesTurn.lua"
+local url2 = "https://raw.githubusercontent.com/vinicius-el-khalili/cc/master/howTheTurnTables.lua"
 createFile(url1,"github.lua")
-createFile(url2,"howTheTablesTurn.lua")
+createFile(url2,"howTheTurnTables.lua")
