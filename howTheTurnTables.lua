@@ -1,24 +1,22 @@
 local function moveTurtle(direction, distance)
-    if direction == "forward" then
-        -- Logic to move forward by 'distance' blocks
-        print("Moving forward by", distance, "blocks")
-    elseif direction == "back" then
-        -- Logic to move backward by 'distance' blocks
-        print("Moving backward by", distance, "blocks")
-    elseif direction == "up" then
-        -- Logic to move up by 'distance' blocks
-        print("Moving up by", distance, "blocks")
-    elseif direction == "down" then
-        -- Logic to move down by 'distance' blocks
-        print("Moving down by", distance, "blocks")
-    elseif direction == "left" then
-        -- Logic to move left by 'distance' blocks
-        print("Moving left by", distance, "blocks")
-    elseif direction == "right" then
-        -- Logic to move right by 'distance' blocks
-        print("Moving right by", distance, "blocks")
+    local movementFunctions = {
+        forward = turtle.forward,
+        back = turtle.back,
+        up = turtle.up,
+        down = turtle.down,
+        left = function() turtle.turnLeft() end,
+        right = function() turtle.turnRight() end
+    }
+
+    local movementFunction = movementFunctions[direction]
+    if movementFunction then
+        for _ = 1, distance do
+            movementFunction()
+        end
+        return true
     else
         print("Invalid direction:", direction)
+        return false
     end
 end
 
