@@ -1,0 +1,6 @@
+function handleFuel() local foundBurnable = false for slot = 1, 16 do local item = turtle.getItemDetail(slot) if item and turtle.getFuelBurnTime(item.name) then turtle.select(slot) turtle.refuel(item.count) foundBurnable = true break end end turtle.select(1) if not foundBurnable then print("Couldn't find burnable item.") end return foundBurnable end
+function findNextWheatSlot() for slot = 1, 16 do local item = turtle.getItemDetail(slot) if item and item.name == "minecraft:wheat_seeds" then return slot end end return nil end
+function plantWheatRow(length) for _ = 1, length do while turtle.getItemCount(turtle.getSelectedSlot()) == 0 do local nextSlot = findNextWheatSlot() if nextSlot then turtle.select(nextSlot) else print("No more wheat seeds found.") return false end end turtle.placeDown() if _ < length then turtle.forward() end end return true end
+function plantWheatField() for row = 1, 9 do if row % 2 == 1 then turtle.turnRight() plantWheatRow(9) turtle.turnRight() else turtle.turnLeft() plantWheatRow(9) turtle.turnLeft() end if row < 9 then turtle.forward() turtle.turnRight() turtle.forward() turtle.turnRight() end end end
+handleFuel()
+plantWheatField()
